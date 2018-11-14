@@ -1,0 +1,36 @@
+body {
+    font-size: 14px;
+    padding: 0 auto;
+    margin: 0 auto;
+    background-color: $bg;
+}
+
+// Importing Fonts
+//Web Font
+@font-face {
+    font-family: 'PokemonGB';
+    src: url('/assets/fonts/pokemon-font/PokemonGB.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+// Page components
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $bg;
+    p {
+        font-family: Helvetica;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px 10px;
+        margin-right: 25px;
+        font-size: 1em;
+        font-family: $textfont;
+        letter-spacing: .1em;
+    }
+}
