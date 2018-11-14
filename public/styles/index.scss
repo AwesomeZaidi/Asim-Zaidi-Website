@@ -25,15 +25,12 @@ main {
                     font-family: PokemonGB;
                 }
                 ul {
-                    // this padding will overrite inherit padding that pushes content to the right and not centered.
                     padding: 5px;
                     justify-content: space-evenly;
                     li {
                         font-size: 2em;
                     }
                     li:hover {
-                        // hover color
-                        // add slow animation hover affect - maybe that's a componenent!
                         color: $yellow;
                     }
                 }
@@ -87,6 +84,9 @@ main {
         .fa-chevron-circle-down {
             display: none;
         }
+        .fa-chevron-circle-down:hover {
+            color: $yellow;
+        }
         .resume-section {
             padding: 2.5em 0em;
             background-color: $verydark;
@@ -123,9 +123,6 @@ main {
                  }
              }
          }
-        //  .fa-chevron-circle-down {
-        //      display: none;
-        //  }
          .resume-section {
              .resume-pdf {
                 min-height: 700px;
@@ -138,6 +135,7 @@ main {
         padding: 20px 0px;
         .landing {
             flex-direction: row;
+            margin-bottom: 3.4em;
             .main-content {
                 padding: 0px 70px 0px 100px;
                 text-align: left;
@@ -170,9 +168,6 @@ main {
                         line-height: 1.5em;
                         border-bottom: .1em solid;
                     }
-                    li:hover {
-                        background-color: $lightgray;
-                    }
                 }
             }
             .side-content {
@@ -183,14 +178,6 @@ main {
                     width: 350px;
                     border-radius: 50%;
                 }
-                img:before {
-                    content: '';
-                    position: absolute;
-                    top: 0; right: 0;
-                    border-top: 50px solid white;
-                    border-left: 80px solid blue;
-                    width: 0;
-                }
                 h1 {
                     font-family: PokemonGB;
                 }
@@ -200,10 +187,6 @@ main {
                     justify-content: space-evenly;
                     li {
                         font-size: 3em;
-                    }
-                    li:hover {
-                        // hover color
-                        color: $yellow;
                     }
                 }
                 .resume {
@@ -218,11 +201,10 @@ main {
 
         }
         .fa-chevron-circle-down {
+            display: block;
+            margin: 0 auto;
             font-size: 36px;
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            margin-bottom: 130px;
+            text-align: center;
         }
         .resume-section {
             padding: 130px 0px 130px 0px;

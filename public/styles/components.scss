@@ -5,20 +5,6 @@ body {
     background-color: $bg;
 }
 
-// Importing Fonts
-//Web Font
-@font-face {
-    font-family: 'PokemonGB';
-    src: url('/assets/fonts/pokemon-font/PokemonGB.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-
-// Page components
-
 header {
     display: flex;
     justify-content: flex-end;
@@ -33,4 +19,74 @@ header {
         font-family: $textfont;
         letter-spacing: .1em;
     }
+}
+
+@include phone {
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: 5em 1.2em;        
+        letter-spacing: 1px;
+        line-height: 1.5em;
+        color: $light;
+        font-family: $textfont;
+        .credits {
+            text-align: center;
+            margin-top: 3.5em;
+        }
+        ul {
+            display: flex;
+            margin: 1em 3em;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 0;
+            color: $fadelight;
+            font-size: 1.5em;
+            list-style: none;
+            text-align: center;
+        }
+    }
+}
+
+@include tablet {
+    footer {
+        margin: 5em 6em;
+        ul {
+            justify-content: space-evenly;
+            font-size: 2em;
+            margin: 0 auto;  
+        }
+    }
+}
+@include desktop {
+    footer {
+        flex-direction: row;
+        margin: 5em 6em;
+        .qoute-text {
+            margin-right: 7em;
+        }
+        .credits {
+            text-align: left;
+            margin: auto;
+        }
+        ul {
+            font-size: 2em;
+            margin: 1em 0;
+            justify-content: space-around;  
+
+        }
+    }
+}
+// Class Styles
+
+.hover_kids > *, .hover {
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
+.qoute {
+    font-style: italic;
+    opacity: 0.3;
 }
