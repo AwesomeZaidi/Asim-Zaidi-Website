@@ -97,6 +97,7 @@ main {
             font-family: $textfont;
             .resume-pdf {
                 min-height: 420px;
+                max-width: 300px;
             }
         }
     }
