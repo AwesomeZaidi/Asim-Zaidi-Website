@@ -4,19 +4,26 @@
   src: url("/assets/fonts/pokemon-font/PokemonGB.ttf");
   font-weight: normal;
   font-style: normal; }
-body {
-  background-color: var(--color-red); }
-
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: url("/assets/fonts/bebas-neue/BebasNeue.ttf");
+  font-weight: normal;
+  font-style: normal; }
 body {
   font-size: 14px;
   padding: 0 auto;
   margin: 0 auto;
-  background-color: #141c3a; }
+  background-color: #E53D32; }
+
+.center-wrapper {
+  position: relative;
+  margin: 0 auto; }
 
 header {
+  height: 3em;
   display: flex;
   justify-content: flex-end;
-  background-color: #141c3a; }
+  background-color: #E53D32; }
   header p {
     font-family: Helvetica;
     background-color: transparent;
@@ -24,7 +31,7 @@ header {
     padding: 10px 10px;
     margin-right: 25px;
     font-size: 1em;
-    font-family: "Montserrat", serif;
+    font-family: "Bebas Neue", serif;
     letter-spacing: .1em; }
 
 @media (min-width: 310px) {
@@ -35,7 +42,7 @@ header {
     letter-spacing: 1px;
     line-height: 1.5em;
     color: #f4f4f4;
-    font-family: "Montserrat", serif; }
+    font-family: "Bebas Neue", serif; }
     footer .credits {
       text-align: center;
       margin-top: 3.5em; }
@@ -84,26 +91,45 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center; }
-    main section.landing-container .name-box {
-      background-color: #f4f4f4;
-      color: black; }
-    main section.landing-container .links {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      list-style: none; }
+    main section.landing-container {
+      background-image: url(../assets/asim.png);
+      background-size: cover; }
+      main section.landing-container .name-box {
+        font-family: "Bebas Neue", serif;
+        padding: .7em 0em;
+        max-width: 160px;
+        margin: 9em auto 4em;
+        border-radius: .5em;
+        background-color: #ffffff62;
+        color: #15141f; }
+        main section.landing-container .name-box h1 {
+          font-size: xx-large;
+          margin: 0; }
+        main section.landing-container .name-box .icon {
+          padding: 0em 0.3em;
+          font-size: 1.4em; }
+      main section.landing-container .fa-chevron-circle-down {
+        font-size: 2em;
+        color: #f4f4f4; }
     main section.projects-container {
-      margin: 0 auto;
-      text-align: center; }
+      background-color: #E53D32; }
       main section.projects-container h2 {
+        margin-top: 1em;
+        font-size: x-large;
+        font-family: "Bebas Neue", serif;
+        color: #f4f4f4;
         text-align: center;
-        margin: 0 auto;
         display: inline-block; }
-      main section.projects-container .project-list {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        list-style: none; }
+      main section.projects-container .project-icon {
+        display: inline;
+        max-height: 3em;
+        padding: 0em 1em; }
+      main section.projects-container button {
+        margin-top: 1em;
+        background-color: #f4f4f4;
+        border: none;
+        border-radius: .3em;
+        padding: .4em 1em; }
     main .project-more-btn {
       background-color: white; }
     main section.bio-container {
@@ -135,7 +161,7 @@ header {
       main .landing .main-content {
         padding: 0px 70px 0px 100px;
         text-align: left;
-        font-family: "Montserrat", serif; }
+        font-family: "Bebas Neue", serif; }
         main .landing .main-content h1 {
           display: unset;
           font-size: 3em; }
@@ -149,7 +175,7 @@ header {
           width: 25em;
           font-size: 1.3em; }
           main .landing .main-content .project-container .title {
-            font-family: "Montserrat", serif;
+            font-family: "Bebas Neue", serif;
             font-weight: 900;
             line-height: 3.5em;
             border-bottom: none; }
@@ -192,7 +218,7 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-family: "Montserrat", serif; }
+      font-family: "Bebas Neue", serif; }
       main .resume-section h1 {
         margin: 0px 0px 15px 0px;
         font-size: 34px; }
