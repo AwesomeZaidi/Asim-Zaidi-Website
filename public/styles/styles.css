@@ -81,82 +81,36 @@ header {
 
 @media (min-width: 310px) {
   main {
-    margin: 2.4em 0em;
-    background-color: #141c3a;
-    color: #f4f4f4; }
-    main ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    main section.landing-container .name-box {
+      background-color: #f4f4f4;
+      color: black; }
+    main section.landing-container .links {
       display: flex;
-      list-style: none; }
-    main .landing {
-      display: flex;
-      flex-direction: column-reverse;
+      justify-content: center;
       text-align: center;
-      align-items: center;
-      margin: 0em 1em; }
-      main .landing .side-content {
-        margin-bottom: 1.4em; }
-        main .landing .side-content img {
-          width: 184px;
-          border-radius: 50%; }
-        main .landing .side-content h1 {
-          font-size: 1.4em;
-          font-family: PokemonGB; }
-        main .landing .side-content ul {
-          padding: 5px;
-          justify-content: space-evenly; }
-          main .landing .side-content ul li {
-            font-size: 2em; }
-          main .landing .side-content ul li:hover {
-            color: #ffc740; }
-        main .landing .side-content .resume {
-          background-color: transparent;
-          color: #fff;
-          padding: .5em 2em;
-          font-size: 1.3em;
-          border: .1em solid;
-          border-radius: 4px; }
-      main .landing .main-content {
-        font-family: "Montserrat", serif;
-        font-size: 0.8em; }
-        main .landing .main-content h1 {
-          display: none; }
-        main .landing .main-content .brief-bio {
-          line-height: 2em;
-          font-size: 1.4em; }
-        main .landing .main-content .project-container {
-          padding: 0;
-          margin: 0em 3em;
-          flex-direction: column;
-          letter-spacing: .1em;
-          font-size: 1.4em; }
-          main .landing .main-content .project-container .title {
-            font-family: "Montserrat", serif;
-            font-weight: 900;
-            line-height: 3.5em;
-            border-bottom: none; }
-          main .landing .main-content .project-container .title:hover {
-            background-color: transparent; }
-          main .landing .main-content .project-container li {
-            font-family: sans-serif;
-            line-height: 1.5em;
-            border-bottom: .1em solid; }
-          main .landing .main-content .project-container li:hover {
-            background-color: #2341AD; }
-    main .fa-chevron-circle-down {
-      display: none; }
-    main .fa-chevron-circle-down:hover {
-      color: #ffc740; }
-    main .resume-section {
-      padding: 2.5em 0em;
-      background-color: #15141f;
-      margin-top: 5em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: "Montserrat", serif; }
-      main .resume-section .resume-pdf {
-        min-height: 420px;
-        max-width: 300px; } }
+      list-style: none; }
+    main section.projects-container {
+      margin: 0 auto;
+      text-align: center; }
+      main section.projects-container h2 {
+        text-align: center;
+        margin: 0 auto;
+        display: inline-block; }
+      main section.projects-container .project-list {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        list-style: none; }
+    main .project-more-btn {
+      background-color: white; }
+    main section.bio-container {
+      color: #f4f4f4; }
+    main section.contact-container img.contact-img {
+      float: left;
+      max-width: 100px; } }
 @media (min-width: 768px) and (max-width: 1199px) {
   main .landing .side-content img {
     min-width: 230px; }
