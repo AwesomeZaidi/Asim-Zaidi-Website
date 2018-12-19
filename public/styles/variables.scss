@@ -20,15 +20,6 @@ $textfont: 'Montserrat', serif;
   font-style: normal;
 }
 
-$textfont: 'Bebas Neue', serif;
-
-@font-face {
-  font-family: 'Bebas-Neue';
-  src: url('/assets/fonts/bebas-neue/BebasNeue.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
@@ -38,6 +29,10 @@ $textfont: 'Bebas Neue', serif;
 //   --color-red: #f00;
 // }
 // Media Query Breakpoints mixins - screen size definitions
+
+body {
+  background-color: var(--color-red);
+}
 
 // Small tablets and large smartphones (landscape view)
 $small-phone-width: 310px;
