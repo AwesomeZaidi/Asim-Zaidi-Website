@@ -3,6 +3,7 @@ body {
     padding: 0 auto;
     margin: 0 auto;
     background-color: $bg;
+    
 }
 
 header {
@@ -89,4 +90,10 @@ header {
 .qoute {
     font-style: italic;
     opacity: 0.3;
+}
+
+a  {
+    text-decoration: none;
+    color: white;
+    // font-family: Helvetica;
 }
