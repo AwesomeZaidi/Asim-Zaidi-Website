@@ -1,8 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 14px;
     padding: 0 auto;
     margin: 0 auto;
-    background-color: $bg;
+    background-color: $bg;   
 }
 
 header {
@@ -89,4 +93,10 @@ header {
 .qoute {
     font-style: italic;
     opacity: 0.3;
+}
+
+a  {
+    text-decoration: none;
+    color: white;
+    // font-family: Helvetica;
 }
