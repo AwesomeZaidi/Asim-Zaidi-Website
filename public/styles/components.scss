@@ -23,6 +23,9 @@ header {
         font-family: $textfont;
         letter-spacing: .1em;
     }
+    p:hover {
+        color: $yellow;
+    }
 }
 
 @include phone {
