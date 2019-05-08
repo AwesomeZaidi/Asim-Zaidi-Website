@@ -3,7 +3,7 @@ main {
         // we'd like to add padding around the string so that elements don't touch the edges.
         margin: 2.4em 0em;
         background-color: $bg;
-        color: $light;
+        color: $text;
         ul {
             display: flex;
             list-style: none;
@@ -16,13 +16,9 @@ main {
             margin: 0em 1em;
             .side-content {
                 margin-bottom: 1.4em;
-                img {
-                    width: 184px;
-                    border-radius: 50%;
-                }
                 h1 {
                     font-size: 1.4em;
-                    font-family: PokemonGB;
+                    font-family: $titlefont;
                 }
                 ul {
                     padding: 5px;
@@ -47,13 +43,28 @@ main {
             .main-content {
                 font-family: $textfont;
                 font-size: 0.8em;
-                h1 {
-                    display: none;
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+                .asim-avatar {
+                    width: 184px;
+                    margin: 0 auto;
+                }
+                .h1_primary {
+                    margin-top: .4em;
+                    color: $primary;
+                }
+                .h1_secondary {
+                    margin-top: -0.2em;
+                    color: $secondary;
                 }
                 // 1.6em = body font of 14px * 1.6
                 .brief-bio {
-                    line-height: 2em;
+                    text-align: left;
                     font-size: 1.4em;
+                    margin: 0.5em 0em;
+                    padding: 0em 2em;
                 }
                 .project-container {
                     padding: 0;
@@ -76,7 +87,7 @@ main {
                         border-bottom: .1em solid;
                     }
                     li:hover {
-                        background-color: $lightgray;
+                        background-color: $secondary;
                     }
                 }
             }
@@ -134,15 +145,16 @@ main {
         // we'd like to add padding around the string so that elements don't touch the edges.
         padding: 20px 0px;
         .landing {
-            flex-direction: row;
             margin-bottom: 3.4em;
             .main-content {
-                padding: 0px 70px 0px 100px;
-                text-align: left;
-                font-family: $textfont;
+                .top-down-center { // not sure why the component style for this wont work.
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
                 h1 {
-                    display: unset;
                     font-size: 3em;
+                    margin: 0.2em 0em;
                 }
                 .brief-bio {
                     line-height: 2em;
@@ -179,7 +191,7 @@ main {
                     border-radius: 50%;
                 }
                 h1 {
-                    font-family: PokemonGB;
+                    font-family: $titlefont;
                 }
                 ul {
                     // this padding will overrite inherit padding that pushes content to the right and not centered.
@@ -203,7 +215,7 @@ main {
         .fa-chevron-circle-down {
             display: block;
             margin: 0 auto;
-            font-size: 36px;
+            font-size: 26px;
             text-align: center;
         }
         .resume-section {

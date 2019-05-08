@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @font-face {
-  font-family: "PokemonGB";
-  src: url("/assets/fonts/pokemon-font/PokemonGB.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "AvenirNext-Bold";
+  src: url("/assets/fonts/AvenirNext/AvenirNextLTPro-Bold.ttf");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("/assets/fonts/AvenirNext/AvenirNextLTPro-Regular.ttf");
 }
 body {
   background-color: var(--color-red);
@@ -17,23 +19,61 @@ body {
   font-size: 14px;
   padding: 0 auto;
   margin: 0 auto;
-  background-color: #141c3a;
+  background-color: #EBEFF3;
+}
+
+i:hover, a:hover {
+  cursor: pointer;
 }
 
 header {
   display: flex;
-  justify-content: flex-end;
-  background-color: #141c3a;
+  justify-content: space-between;
+  padding: 0em 5em;
 }
 header p {
   font-family: Helvetica;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   padding: 10px 10px;
   margin-right: 25px;
   font-size: 1em;
-  font-family: "Montserrat", serif;
+  font-family: "AvenirNext-Regular", serif;
   letter-spacing: 0.1em;
+}
+header p:hover {
+  color: #ffc740;
+}
+header .right, header .left {
+  display: flex;
+  align-items: center;
+}
+
+.top-down-center {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.github-graph {
+  margin: 1em auto 2em auto;
+  max-width: 80vw;
+}
+
+.icon {
+  font-size: 2em;
+  margin: 0 0.6em;
+}
+
+.icon:hover {
+  color: #ffc740;
+}
+
+.center_text {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0.5em 0em;
+  padding: 0em 2em;
 }
 
 @media (min-width: 310px) {
@@ -43,8 +83,8 @@ header p {
     margin: 5em 1.2em;
     letter-spacing: 1px;
     line-height: 1.5em;
-    color: #f4f4f4;
-    font-family: "Montserrat", serif;
+    color: green;
+    font-family: "AvenirNext-Regular", serif;
   }
   footer .credits {
     text-align: center;
@@ -104,14 +144,13 @@ header p {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 @media (min-width: 310px) {
   main {
     margin: 2.4em 0em;
-    background-color: #141c3a;
-    color: #f4f4f4;
+    background-color: #EBEFF3;
+    color: #000;
   }
   main ul {
     display: flex;
@@ -127,13 +166,9 @@ a {
   main .landing .side-content {
     margin-bottom: 1.4em;
   }
-  main .landing .side-content img {
-    width: 184px;
-    border-radius: 50%;
-  }
   main .landing .side-content h1 {
     font-size: 1.4em;
-    font-family: PokemonGB;
+    font-family: "AvenirNext-Bold", serif;
   }
   main .landing .side-content ul {
     padding: 5px;
@@ -154,15 +189,28 @@ a {
     border-radius: 4px;
   }
   main .landing .main-content {
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
     font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
   }
-  main .landing .main-content h1 {
-    display: none;
+  main .landing .main-content .asim-avatar {
+    width: 184px;
+    margin: 0 auto;
+  }
+  main .landing .main-content .h1_primary {
+    margin-top: 0.4em;
+    color: #CA1C1C;
+  }
+  main .landing .main-content .h1_secondary {
+    margin-top: -0.2em;
+    color: #4E00FF;
   }
   main .landing .main-content .brief-bio {
-    line-height: 2em;
+    text-align: left;
     font-size: 1.4em;
+    margin: 0.5em 0em;
+    padding: 0em 2em;
   }
   main .landing .main-content .project-container {
     padding: 0;
@@ -172,7 +220,7 @@ a {
     font-size: 1.4em;
   }
   main .landing .main-content .project-container .title {
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
     font-weight: 900;
     line-height: 3.5em;
     border-bottom: none;
@@ -186,7 +234,7 @@ a {
     border-bottom: 0.1em solid;
   }
   main .landing .main-content .project-container li:hover {
-    background-color: #2341AD;
+    background-color: #4E00FF;
   }
   main .fa-chevron-circle-down {
     display: none;
@@ -201,7 +249,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
   }
   main .resume-section .resume-pdf {
     min-height: 420px;
@@ -234,17 +282,16 @@ a {
     padding: 20px 0px;
   }
   main .landing {
-    flex-direction: row;
     margin-bottom: 3.4em;
   }
-  main .landing .main-content {
-    padding: 0px 70px 0px 100px;
-    text-align: left;
-    font-family: "Montserrat", serif;
+  main .landing .main-content .top-down-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   main .landing .main-content h1 {
-    display: unset;
     font-size: 3em;
+    margin: 0.2em 0em;
   }
   main .landing .main-content .brief-bio {
     line-height: 2em;
@@ -258,7 +305,7 @@ a {
     font-size: 1.3em;
   }
   main .landing .main-content .project-container .title {
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
     font-weight: 900;
     line-height: 3.5em;
     border-bottom: none;
@@ -281,7 +328,7 @@ a {
     border-radius: 50%;
   }
   main .landing .side-content h1 {
-    font-family: PokemonGB;
+    font-family: "AvenirNext-Bold", serif;
   }
   main .landing .side-content ul {
     padding: 5px;
@@ -301,7 +348,7 @@ a {
   main .fa-chevron-circle-down {
     display: block;
     margin: 0 auto;
-    font-size: 36px;
+    font-size: 26px;
     text-align: center;
   }
   main .resume-section {
@@ -311,7 +358,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
   }
   main .resume-section h1 {
     margin: 0px 0px 15px 0px;

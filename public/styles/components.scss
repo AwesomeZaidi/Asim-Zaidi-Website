@@ -9,14 +9,17 @@ body {
     background-color: $bg;   
 }
 
+i:hover, a:hover {
+    cursor: pointer;
+}
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: $bg;
+    justify-content: space-between;
+    padding: 0em 5em;
     p {
         font-family: Helvetica;
         background-color: transparent;
-        color: #fff;
+        color: $text;
         padding: 10px 10px;
         margin-right: 25px;
         font-size: 1em;
@@ -26,6 +29,40 @@ header {
     p:hover {
         color: $yellow;
     }
+    .right, .left {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// COMPONENT LAYOUTS
+.top-down-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+// ONE OFF THINGS
+.github-graph {
+    margin: 1em auto 2em auto; 
+    max-width: 80vw;
+}
+
+.icon {
+    font-size: 2em;
+    margin: 0 .6em;
+}
+
+.icon:hover {
+    color: $yellow;
+}
+
+.center_text {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0.5em 0em;
+    padding: 0em 2em;
 }
 
 @include phone {
@@ -98,8 +135,6 @@ header {
     opacity: 0.3;
 }
 
-a  {
+a {
     text-decoration: none;
-    color: white;
-    // font-family: Helvetica;
 }
