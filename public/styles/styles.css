@@ -26,29 +26,6 @@ i:hover, a:hover {
   cursor: pointer;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0em 5em;
-}
-header p {
-  font-family: Helvetica;
-  background-color: transparent;
-  color: #000;
-  padding: 10px 10px;
-  margin-right: 25px;
-  font-size: 1em;
-  font-family: "AvenirNext-Regular", serif;
-  letter-spacing: 0.1em;
-}
-header p:hover {
-  color: #ffc740;
-}
-header .right, header .left {
-  display: flex;
-  align-items: center;
-}
-
 .top-down-center {
   display: flex;
   flex-direction: column;
@@ -56,7 +33,7 @@ header .right, header .left {
 }
 
 .github-graph {
-  margin: 1em auto 2em auto;
+  margin: 1em auto 3em auto;
   max-width: 80vw;
 }
 
@@ -76,14 +53,45 @@ header .right, header .left {
   padding: 0em 2em;
 }
 
-@media (min-width: 310px) {
+footer {
+  font-family: "AvenirNext-Regular", serif;
+}
+footer ul {
+  text-decoration-style: none;
+}
+
+@media (min-width: 310px) and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0em 5em;
+  }
+  header p {
+    font-family: Helvetica;
+    background-color: transparent;
+    color: #4A4A4A;
+    padding: 10px 10px;
+    margin-right: 25px;
+    font-size: 1.4em;
+    font-family: "AvenirNext-Regular", serif;
+    letter-spacing: 0.1em;
+  }
+  header p:hover {
+    color: #ffc740;
+  }
+  header .right, header .left {
+    display: flex;
+    align-items: center;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
     margin: 5em 1.2em;
     letter-spacing: 1px;
     line-height: 1.5em;
-    color: green;
+    color: #4A4A4A;
     font-family: "AvenirNext-Regular", serif;
   }
   footer .credits {
@@ -101,8 +109,12 @@ header .right, header .left {
     list-style: none;
     text-align: center;
   }
+
+  .waka-graph {
+    max-width: 92vw;
+  }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 999px) {
   footer {
     margin: 5em 6em;
   }
@@ -112,22 +124,74 @@ header .right, header .left {
     margin: 0 auto;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0em 5em;
+  }
+  header p {
+    font-family: Helvetica;
+    background-color: transparent;
+    color: #4A4A4A;
+    padding: 10px 10px;
+    margin-right: 25px;
+    font-size: 1.4em;
+    font-family: "AvenirNext-Regular", serif;
+    letter-spacing: 0.1em;
+  }
+  header p:hover {
+    color: #ffc740;
+  }
+  header .right, header .left {
+    display: flex;
+    align-items: center;
+  }
+
   footer {
+    display: flex;
     flex-direction: row;
     margin: 5em 6em;
-  }
-  footer .qoute-text {
-    margin-right: 7em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    color: #4A4A4A;
+    font-family: "AvenirNext-Regular", serif;
   }
   footer .credits {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+  footer ul {
+    display: flex;
+    margin: 0em 3em;
+    align-items: center;
+    justify-content: space-between;
+    color: #4A4A4A;
+    font-size: 1.5em;
+    list-style: none;
+    text-align: center;
+  }
+  footer ul > * {
+    margin: auto 0.2em;
+  }
+
+  .qoute-text {
+    font-size: 1.2em;
+    margin-right: 7em;
+  }
+
+  .credits {
+    font-size: 1.2em;
     text-align: left;
     margin: auto;
   }
-  footer ul {
-    font-size: 2em;
-    margin: 1em 0;
-    justify-content: space-around;
+
+  .waka-graph {
+    max-width: 80vw;
+    max-width: 42em;
+    margin: 0 auto 5em auto;
   }
 }
 .hover_kids > *, .hover {
@@ -146,11 +210,14 @@ a {
   text-decoration: none;
 }
 
-@media (min-width: 310px) {
+@media (min-width: 310px) and (max-width: 767px) {
   main {
     margin: 2.4em 0em;
     background-color: #EBEFF3;
-    color: #000;
+    color: #4A4A4A;
+    /* Firefox < 16 */
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Internet Explorer */
   }
   main ul {
     display: flex;
@@ -158,35 +225,19 @@ a {
   }
   main .landing {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     margin: 0em 1em;
-  }
-  main .landing .side-content {
-    margin-bottom: 1.4em;
-  }
-  main .landing .side-content h1 {
-    font-size: 1.4em;
-    font-family: "AvenirNext-Bold", serif;
-  }
-  main .landing .side-content ul {
-    padding: 5px;
-    justify-content: space-evenly;
-  }
-  main .landing .side-content ul li {
-    font-size: 2em;
-  }
-  main .landing .side-content ul li:hover {
-    color: #ffc740;
-  }
-  main .landing .side-content .resume {
-    background-color: transparent;
-    color: #fff;
-    padding: 0.5em 2em;
-    font-size: 1.3em;
-    border: 0.1em solid;
-    border-radius: 4px;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
   }
   main .landing .main-content {
     font-family: "AvenirNext-Regular", serif;
@@ -212,82 +263,164 @@ a {
     margin: 0.5em 0em;
     padding: 0em 2em;
   }
-  main .landing .main-content .project-container {
-    padding: 0;
-    margin: 0em 3em;
-    flex-direction: column;
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
-  }
-  main .landing .main-content .project-container .title {
-    font-family: "AvenirNext-Regular", serif;
-    font-weight: 900;
-    line-height: 3.5em;
-    border-bottom: none;
-  }
-  main .landing .main-content .project-container .title:hover {
-    background-color: transparent;
-  }
-  main .landing .main-content .project-container li {
-    font-family: sans-serif;
-    line-height: 1.5em;
-    border-bottom: 0.1em solid;
-  }
-  main .landing .main-content .project-container li:hover {
-    background-color: #4E00FF;
-  }
-  main .fa-chevron-circle-down {
+  main .landing .main-content .fa-chevron-circle-down {
     display: none;
   }
-  main .fa-chevron-circle-down:hover {
+  main .landing .main-content .fa-chevron-circle-down:hover {
     color: #ffc740;
   }
-  main .resume-section {
-    padding: 2.5em 0em;
-    background-color: #15141f;
-    margin-top: 5em;
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  main .projects-section {
+    padding: 130px 0px 130px 0px;
+    background-color: #ffffff;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "AvenirNext-Regular", serif;
+    color: #4A4A4A;
   }
-  main .resume-section .resume-pdf {
-    min-height: 420px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  main .landing .side-content img {
-    min-width: 230px;
-  }
-  main .landing .side-content h1 {
-    font-size: 2em;
-  }
-  main .landing .side-content ul li {
+  main .projects-section .section-title {
+    margin-bottom: 2em;
     font-size: 2.4em;
   }
+  main .projects-section h1 {
+    margin: 0px 0px 15px 0px;
+    font-size: 34px;
+  }
+  main .projects-section .project-container.slide-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  main .projects-section .project-container.slide-left {
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+  }
+  main .projects-section .project-container {
+    padding: 1em 1em 4em 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  main .projects-section .project-container .project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  main .projects-section .project-container .project-about h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    align-self: center;
+  }
+  main .projects-section .project-container .project-about .project-bio_left, main .projects-section .project-container .project-about .project-bio_right {
+    display: none;
+  }
+  main .projects-section .project-container .project-about .project-tech_left, main .projects-section .project-container .project-about .project-tech_right {
+    display: none;
+  }
+  main .projects-section .project-container .project-about .project-btn {
+    display: none;
+  }
+  main .projects-section .project-container .project-demo .project-asset {
+    max-width: 90vw;
+    max-height: 60vh;
+  }
+  main .projects-section .project-container:nth-child(2n+1) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 999px) {
   main .landing .main-content {
     font-size: 1em;
     margin: 0em 4em;
   }
-  main .landing .main-content .project-container {
-    margin: 0em 8em;
-  }
-  main .resume-section .resume-pdf {
-    min-height: 700px;
-    min-width: 600px;
-  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   main {
     padding: 20px 0px;
+    /* Firefox < 16 */
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Internet Explorer */
   }
   main .landing {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
     margin-bottom: 3.4em;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
+  }
+  main .landing .main-content {
+    font-family: "AvenirNext-Regular", serif;
   }
   main .landing .main-content .top-down-center {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  main .landing .main-content .asim-avatar {
+    width: 250px;
+    margin: 0 auto;
+  }
+  main .landing .main-content .h1_primary {
+    margin-top: 0.4em;
+    color: #CA1C1C;
+  }
+  main .landing .main-content .h1_secondary {
+    margin-top: -0.2em;
+    color: #4E00FF;
   }
   main .landing .main-content h1 {
     font-size: 3em;
@@ -296,77 +429,153 @@ a {
   main .landing .main-content .brief-bio {
     line-height: 2em;
     font-size: 1.6em;
+    padding-left: 10em;
   }
-  main .landing .main-content .project-container {
-    margin: 0;
-    flex-direction: column;
-    letter-spacing: 0.1em;
-    width: 25em;
-    font-size: 1.3em;
-  }
-  main .landing .main-content .project-container .title {
-    font-family: "AvenirNext-Regular", serif;
-    font-weight: 900;
-    line-height: 3.5em;
-    border-bottom: none;
-  }
-  main .landing .main-content .project-container .title:hover {
-    background-color: transparent;
-  }
-  main .landing .main-content .project-container li {
-    font-family: sans-serif;
-    line-height: 1.5em;
-    border-bottom: 0.1em solid;
-  }
-  main .landing .side-content {
-    text-align: center;
-    margin-right: 140px;
-    min-width: 395px;
-  }
-  main .landing .side-content img {
-    width: 350px;
-    border-radius: 50%;
-  }
-  main .landing .side-content h1 {
-    font-family: "AvenirNext-Bold", serif;
-  }
-  main .landing .side-content ul {
-    padding: 5px;
-    justify-content: space-evenly;
-  }
-  main .landing .side-content ul li {
-    font-size: 3em;
-  }
-  main .landing .side-content .resume {
-    background-color: transparent;
-    color: #fff;
-    padding: 0.5em 2em;
-    font-size: 1.3em;
-    border: 0.1em solid;
-    border-radius: 4px;
-  }
-  main .fa-chevron-circle-down {
+  main .landing .main-content .fa-chevron-circle-down {
     display: block;
     margin: 0 auto;
-    font-size: 26px;
+    font-size: 32px;
     text-align: center;
   }
-  main .resume-section {
+  main .landing .main-content .fa-chevron-circle-down:hover {
+    color: #ffc740;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  main .projects-section {
     padding: 130px 0px 130px 0px;
-    background-color: #15141f;
+    background-color: #ffffff;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "AvenirNext-Regular", serif;
+    color: #4A4A4A;
   }
-  main .resume-section h1 {
+  main .projects-section .section-title {
+    margin-bottom: 3em;
+    font-size: 3.4em;
+  }
+  main .projects-section h1 {
     margin: 0px 0px 15px 0px;
     font-size: 34px;
   }
-  main .resume-section .resume-pdf {
-    min-height: 690px;
-    min-width: 600px;
+  main .projects-section .project-container.slide-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  main .projects-section .project-container.slide-left {
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+  }
+  main .projects-section .project-container {
+    padding: 1em 4em 8em 4em;
+    display: flex;
+  }
+  main .projects-section .project-container .project-about:nth-child(even) {
+    margin-left: 7em;
+  }
+  main .projects-section .project-container .project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  main .projects-section .project-container .project-about h1 {
+    margin-bottom: 1.8em;
+    font-size: 2.8em;
+    align-self: center;
+  }
+  main .projects-section .project-container .project-about .title_center {
+    text-align: center;
+  }
+  main .projects-section .project-container .project-about .title_left {
+    text-align: left;
+  }
+  main .projects-section .project-container .project-about .title_right {
+    text-align: right;
+  }
+  main .projects-section .project-container .project-about .project-bio_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-bio_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-tech_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-tech_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-bio_left, main .projects-section .project-container .project-about .project-bio_right {
+    font-size: 1.6em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-tech_left, main .projects-section .project-container .project-about .project-tech_right {
+    font-size: 1.1em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-btn {
+    background-color: #ffffff;
+    border: 2px solid #EBEFF3;
+    color: #4A4A4A;
+    font-style: italic;
+    padding: 0.6em 3em;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  main .projects-section .project-container .project-about .project-btn:hover {
+    background-color: #4A4A4A;
+    color: #ffffff;
+  }
+  main .projects-section .project-container .project-demo {
+    margin-top: 3.8em;
+  }
+  main .projects-section .project-container .project-demo .project-asset {
+    max-height: 50em;
+    max-width: 54em;
   }
 }
 

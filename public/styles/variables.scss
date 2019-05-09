@@ -2,7 +2,7 @@ $bg: #EBEFF3;
 $primary: #CA1C1C;
 $secondary: #4E00FF;
 $danger: #fa4359;
-$text: #000;
+$text: #4A4A4A;
 $fadelight: rgba(210, 209, 209, 0.968);
 $dark: #222;
 $verydark: #15141f;
@@ -55,11 +55,11 @@ $small-phone-width: 310px;
 $tablet-width: 768px;
 
 // Large tablets and desktops
-$desktop-width: 1200px;
+$desktop-width: 1000px;
 
 // we will design for mobile first so only need to media query tablets and desktop views.
 @mixin phone {
-    @media (min-width: #{$small-phone-width}) {
+    @media (min-width: #{$small-phone-width}) and (max-width: #{$tablet-width - 1px}) {
         @content;
       }
 }
