@@ -1,36 +1,168 @@
-        <main>
-            <section class="landing">
-                <div class="main-content">
-                    <h1>Hi, I'm Asim,</h1>
-                    <p class="brief-bio">I enjoy building products that users will love. I transferred from University of Illinois College of Engineering
-                    to the <a href="https://www.makeschool.com">Make School Product College</a> in San Fransisco. I'm specializing in full stack web
-                    development and currently open for internship opportunities.</p>
+<main>
+    <section class="landing">
+        <div class="main-content">
+            <div class='top-down-center'>
+                <img class='asim-avatar' src='/assets/my-anime.svg'>
+                <h1 class='h1_primary'>ASIM! 🖤💻🤘🏼</h1>
+                <h1 class='h1_secondary'>Software Engineer</h1>
+            </div>
+            <p class="brief-bio">
+                <strong>Recently, I...</strong>
+            </p>
+            <p class="brief-bio">
+                <a className='recent-link' target='_onblank' href='https://www.techmade.co'>Launched a company</a> and 
+                <a className='recent-link' target='_onblank' href='https://futurefounders.com/news-article/future-founders-launches-residency-program-announces-2018-cohort-members/'>
+                graduated from an early startup accelerator</a>
+            </p>
+            <p class="brief-bio">
+                <a className='recent-link'> Wrote about Recursion and was Published</a>
+            </p>
+            <p class="brief-bio">
+                <a className='recent-link' target='_onblank' href='https://instagram.com/sadboykj/'>Started managing Oakland rapper Sad Boy KJ</a>
+            </p>
 
-                    <ul class="project-container hover_kids">
-                        <li class="title"><strong>Recent Projects: </strong></li>
-                        <a href="https://www.untilafter.life"><li>📖 Until After</li></a>
-                        <a href="https://www.techmade.co"><li>💻 Tech Made</li></a>
-                        <a href="https://www.bondfire.me"><li>🔥 Bondfire</li></a>
-                    </ul>
+            <center><img class='github-graph' src="http://ghchart.rshah.org/awesomezaidi" alt="Asim's Github chart" /></center>
+            
+            <h1>Check out how much I've been coding this week👨‍💻 </h1>
+
+            
+                <center>
+                    <figure class='waka-graph'>
+                        <embed src="https://wakatime.com/share/@asim/9502838a-b928-488e-a8dd-5843d485f8f6.svg"></embed>
+                    </figure>
+                </center>
+            
+            {{!-- <p class="center_text">View my work</p> --}}
+            {{!-- <i href='#projects-section' class="fas fa-chevron-circle-down hover"></i> --}}
+        </div>
+    </section>
+    <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script type="text/javascript">Calendly.initBadgeWidget({ url: 'https://calendly.com/asim-zaidi', text: 'Schedule time with me', color: '#00a2ff', textColor: '#ffffff', branding: true });</script>
+    <!-- Calendly badge widget end -->
+    <div id='projects-section' class="projects-section">
+        <h1 class='section-title'>My Projects</h1>
+        <p class='section-slogan'>🧡 for JS, 💙 for React, 💚 for Python</p>
+        <div class="projects-container">
+            <div class="project">
+                <div class="asset-container bluebg">
+                    <img class='project-asset' src='./assets/clubs.png'>
                 </div>
-                <div class="side-content">
-                    <img src="/assets/avatar_v2.jpg" alt="">
-                    <h1>「 Asim Zaidi 」</h1>
-                    <ul class="hover_kids">
-                        <li><i class="fas fa-envelope"></i></li>
-                        <li><i class="fab fa-linkedin"></i></li>
-                        <li><i class="fab fa-github"></i></li>
-                        <li><i class="fab fa-medium-m"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                    </ul>
-                    <button class="resume" type="button" name="button">Resume</button>
+                <div class='project-content'>
+                    <h2 class="project-title">Clubs App</h2>
+                    <p class="tech-text blue">React, Redux, ES6, Scss, Node, Mongo, Express, Seperation of Concerns, Sketch, RoboT3, Mongoose, Heroku, MLab, JWT, npm.</p>
+                    <p class='project-description'>React web app being tested by Make School Product College to better manage the club life.</p>
                 </div>
-            </section>
-                <i class="fas fa-chevron-circle-down hover"></i>
-            <div class="resume-section">
-                <h1>MY RESUME</h1>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-                <embed class="resume-pdf" src="/assets/Asim_Resume.pdf"/>
+                <div class="btn-container">
+                    <button class='blue-btn'>Try It</button>
+                    <button class="blue-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="asset-container bluebg">
+                    <img class='project-asset' src='./assets/dm-landing-demo.gif'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Digital Menu</h2>
+                    <p class="tech-text blue">My partner built the back end Node API that fed to my React & Redux front end. Also created a CSS library to speed development.</p>
+                    <p class='project-description'>Online database menu management for restaurants. Open API any onlinemenu service can make a request for data.</p>
+                </div>
+                <div class="btn-container">
+                    <button class='blue-btn'>Try It</button>
+                    <button class="blue-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="asset-container bluebg">
+                    <img class='project-asset' src='./assets/techmade.png'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Techmade</h2>
+                    <p class="tech-text blue">Node, Express, Mongo, React, React Native, Hooks, Stripe, SendGrid, Bases Testing, Docker, Heroku.</p>
+                    <p class='project-description'>Software consulting firm that createa powerful and joyful mobile apps, targetted landing pages, and websites for creatives.</p>
+                </div>
+                <div class="btn-container">
+                    <button class='blue-btn'>Try It</button>
+                    <button class="blue-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="asset-container orangebg">
+                    <img class='project-asset' src='./assets/votersguide.gif'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Voters Guide</h2>
+                    <p class="tech-text orange">Node, Express, JavaScript, jQuery, MLab (MongoDB), Mocha, Chai, HTML5/CSS3</p>
+                    <p class='project-description'>Save and share votes easier than ever. Partnering with WeVote to bring this to the entire nation next year!</p>
+                </div>
+                <div class="btn-container">
+                    <button class='orange-btn'>Try It</button>
+                    <button class="orange-btn"><i class='icon fab fa-github'></i></button>
+                </div>
             </div>
 
-        </main>
+            <div class="project">
+                <div class="asset-container greenbg">
+                    <img class='project-asset' src='./assets/callrouter.png'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Telio</h2>
+                    <p class="tech-text green">Python3, Flask, Trie Tree, Dictionaries, Millions of data!</p>
+                    <p class='project-description'>Instantaneous international phone call routing system that finds the cheapest route through millions of route cost data from different multiple carriers.</p>
+                </div>
+                <div class="btn-container">
+                    <button class='green-btn'>Try It</button>
+                    <button class="green-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="asset-container orangebg">
+                    <img class='project-asset' src='./assets/life.png'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Until After</h2>
+                    <p class="tech-text orange">Node, Express, JavaScript, jQuery, MLab (MongoDB), Mocha, Chai, HTML5/CSS3</p>
+                    <p class='project-description'>Beautiful private journal that can unlock when you die. Converting to a React Native App!</p>
+                </div>
+                <div class="btn-container">
+                    <button class='orange-btn'>Try It</button>
+                    <button class="orange-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="asset-container orangebg">
+                    <img class='project-asset' src='./assets/bondfire.gif'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Bondfire</h2>
+                    <p class="tech-text orange">JavaScript, Firebase, HTML/CSS, Scss, Bootstrap, Pub, jQuery, OAuth, Stripe, Send Grid, Cloud Functions.</p>
+                    <p class='project-description'>allows artists to create meaningful experiences with their fans by schedule unique and secure on-demand meetups.</p>
+                </div>
+                <div class="btn-container">
+                    <button class='orange-btn'>Try It</button>
+                    <button class="orange-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="asset-container orangebg">
+                    <img class='project-asset' src='./assets/personalsite.png'>
+                </div>
+                <div class='project-content'>
+                    <h2 class="project-title">Personal Website</h2>
+                    <p class="tech-text orange">Node, Express, JavaScript, jQuery, HTML5/CSS3</p>
+                    <p class='project-description'>allows artists to create meaningful experiences with their fans by schedule unique and secure on-demand meetups.</p>
+                </div>
+                <div class="btn-container">
+                    <button class='orange-btn'>Try It</button>
+                    <button class="orange-btn"><i class='icon fab fa-github'></i></button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>

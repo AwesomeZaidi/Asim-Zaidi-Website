@@ -1,46 +1,98 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @font-face {
-  font-family: "PokemonGB";
-  src: url("/assets/fonts/pokemon-font/PokemonGB.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "AvenirNext-Bold";
+  src: url("/assets/fonts/AvenirNext/AvenirNextLTPro-Bold.ttf");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("/assets/fonts/AvenirNext/AvenirNextLTPro-Regular.ttf");
 }
 body {
   background-color: var(--color-red);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 14px;
   padding: 0 auto;
   margin: 0 auto;
-  background-color: #141c3a;
+  background-color: #EBEFF3;
 }
 
-header {
+i:hover, a:hover {
+  cursor: pointer;
+}
+
+.top-down-center {
   display: flex;
-  justify-content: flex-end;
-  background-color: #141c3a;
-}
-header p {
-  font-family: Helvetica;
-  background-color: transparent;
-  color: #fff;
-  padding: 10px 10px;
-  margin-right: 25px;
-  font-size: 1em;
-  font-family: "Montserrat", serif;
-  letter-spacing: 0.1em;
+  flex-direction: column;
+  align-content: center;
 }
 
-@media (min-width: 310px) {
+.github-graph {
+  margin: 1em auto 3em auto;
+  max-width: 80vw;
+}
+
+.icon {
+  font-size: 2em;
+  margin: 0 0.6em;
+}
+
+.icon:hover {
+  color: #ffc740;
+}
+
+.center_text {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0.5em 0em;
+  padding: 0em 2em;
+}
+
+footer {
+  font-family: "AvenirNext-Regular", serif;
+}
+footer ul {
+  text-decoration-style: none;
+}
+
+@media (min-width: 310px) and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0em 5em;
+  }
+  header p {
+    font-family: Helvetica;
+    background-color: transparent;
+    color: #4A4A4A;
+    padding: 10px 10px;
+    margin-right: 25px;
+    font-size: 1.4em;
+    font-family: "AvenirNext-Regular", serif;
+    letter-spacing: 0.1em;
+  }
+  header p:hover {
+    color: #ffc740;
+  }
+  header .right, header .left {
+    display: flex;
+    align-items: center;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
     margin: 5em 1.2em;
     letter-spacing: 1px;
     line-height: 1.5em;
-    color: #f4f4f4;
-    font-family: "Montserrat", serif;
+    color: #4A4A4A;
+    font-family: "AvenirNext-Regular", serif;
   }
   footer .credits {
     text-align: center;
@@ -57,8 +109,12 @@ header p {
     list-style: none;
     text-align: center;
   }
+
+  .waka-graph {
+    max-width: 92vw;
+  }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 999px) {
   footer {
     margin: 5em 6em;
   }
@@ -68,22 +124,74 @@ header p {
     margin: 0 auto;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0em 5em;
+  }
+  header p {
+    font-family: Helvetica;
+    background-color: transparent;
+    color: #4A4A4A;
+    padding: 10px 10px;
+    margin-right: 25px;
+    font-size: 1.4em;
+    font-family: "AvenirNext-Regular", serif;
+    letter-spacing: 0.1em;
+  }
+  header p:hover {
+    color: #ffc740;
+  }
+  header .right, header .left {
+    display: flex;
+    align-items: center;
+  }
+
   footer {
+    display: flex;
     flex-direction: row;
     margin: 5em 6em;
-  }
-  footer .qoute-text {
-    margin-right: 7em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    color: #4A4A4A;
+    font-family: "AvenirNext-Regular", serif;
   }
   footer .credits {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+  footer ul {
+    display: flex;
+    margin: 0em 3em;
+    align-items: center;
+    justify-content: space-between;
+    color: #4A4A4A;
+    font-size: 1.5em;
+    list-style: none;
+    text-align: center;
+  }
+  footer ul > * {
+    margin: auto 0.2em;
+  }
+
+  .qoute-text {
+    font-size: 1.2em;
+    margin-right: 7em;
+  }
+
+  .credits {
+    font-size: 1.2em;
     text-align: left;
     margin: auto;
   }
-  footer ul {
-    font-size: 2em;
-    margin: 1em 0;
-    justify-content: space-around;
+
+  .waka-graph {
+    max-width: 80vw;
+    max-width: 42em;
+    margin: 0 auto 5em auto;
   }
 }
 .hover_kids > *, .hover {
@@ -100,14 +208,45 @@ header p {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
-@media (min-width: 310px) {
+.blue {
+  color: #1878FB;
+}
+
+.bluebg {
+  background-color: #1878FB;
+}
+
+.green {
+  color: #27BB21;
+}
+
+.greenbg {
+  background-color: #27BB21;
+}
+
+.orange {
+  color: #FF7700;
+}
+
+.orangebg {
+  background-color: #FF7700;
+}
+
+.tech-text {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+@media (min-width: 310px) and (max-width: 767px) {
   main {
     margin: 2.4em 0em;
-    background-color: #141c3a;
-    color: #f4f4f4;
+    background-color: #EBEFF3;
+    color: #4A4A4A;
+    /* Firefox < 16 */
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Internet Explorer */
   }
   main ul {
     display: flex;
@@ -115,207 +254,562 @@ a {
   }
   main .landing {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     margin: 0em 1em;
-  }
-  main .landing .side-content {
-    margin-bottom: 1.4em;
-  }
-  main .landing .side-content img {
-    width: 184px;
-    border-radius: 50%;
-  }
-  main .landing .side-content h1 {
-    font-size: 1.4em;
-    font-family: PokemonGB;
-  }
-  main .landing .side-content ul {
-    padding: 5px;
-    justify-content: space-evenly;
-  }
-  main .landing .side-content ul li {
-    font-size: 2em;
-  }
-  main .landing .side-content ul li:hover {
-    color: #ffc740;
-  }
-  main .landing .side-content .resume {
-    background-color: transparent;
-    color: #fff;
-    padding: 0.5em 2em;
-    font-size: 1.3em;
-    border: 0.1em solid;
-    border-radius: 4px;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
   }
   main .landing .main-content {
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
     font-size: 0.8em;
-  }
-  main .landing .main-content h1 {
-    display: none;
-  }
-  main .landing .main-content .brief-bio {
-    line-height: 2em;
-    font-size: 1.4em;
-  }
-  main .landing .main-content .project-container {
-    padding: 0;
-    margin: 0em 3em;
-    flex-direction: column;
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
-  }
-  main .landing .main-content .project-container .title {
-    font-family: "Montserrat", serif;
-    font-weight: 900;
-    line-height: 3.5em;
-    border-bottom: none;
-  }
-  main .landing .main-content .project-container .title:hover {
-    background-color: transparent;
-  }
-  main .landing .main-content .project-container li {
-    font-family: sans-serif;
-    line-height: 1.5em;
-    border-bottom: 0.1em solid;
-  }
-  main .landing .main-content .project-container li:hover {
-    background-color: #2341AD;
-  }
-  main .fa-chevron-circle-down {
-    display: none;
-  }
-  main .fa-chevron-circle-down:hover {
-    color: #ffc740;
-  }
-  main .resume-section {
-    padding: 2.5em 0em;
-    background-color: #15141f;
-    margin-top: 5em;
     display: flex;
     flex-direction: column;
+  }
+  main .landing .main-content .asim-avatar {
+    width: 184px;
+    margin: 0 auto;
+  }
+  main .landing .main-content .h1_primary {
+    margin-top: 0.4em;
+    color: #CA1C1C;
+  }
+  main .landing .main-content .h1_secondary {
+    margin-top: -0.2em;
+    color: #4E00FF;
+  }
+  main .landing .main-content .brief-bio {
+    text-align: left;
+    font-size: 1.4em;
+    margin: 0.5em 0em;
+    padding: 0em 2em;
+  }
+  main .landing .main-content .fa-chevron-circle-down {
+    display: none;
+  }
+  main .landing .main-content .fa-chevron-circle-down:hover {
+    color: #ffc740;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  main .projects-section {
+    padding: 76px 10px 76px 10px;
+    background-color: #ffffff;
+    margin-top: 100px;
+    font-family: "AvenirNext-Regular", serif;
+    color: #4A4A4A;
+    text-align: center;
+  }
+  main .projects-section .projects-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 3em;
+    justify-items: center;
+  }
+  main .projects-section .project {
+    padding-top: 1.8em;
+    overflow: hidden;
+    border: 1px solid #d5d5d581;
+    box-shadow: #d5d5d581;
+    border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 5px -5px #EBEFF3;
+    -moz-box-shadow: 10px 10px 5px -5px #EBEFF3;
+    box-shadow: 10px 10px 5px -5px #EBEFF3;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .projects-section .project .asset-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
     align-items: center;
-    font-family: "Montserrat", serif;
+    padding-top: 1.6em;
   }
-  main .resume-section .resume-pdf {
-    min-height: 420px;
+  main .projects-section .project .asset-container .project-asset {
+    width: 90%;
+    height: 90%;
   }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  main .landing .side-content img {
-    min-width: 230px;
+  main .projects-section .project .project-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: left;
+    margin: 0 auto;
   }
-  main .landing .side-content h1 {
+  main .projects-section .project .project-content .project-title {
     font-size: 2em;
   }
-  main .landing .side-content ul li {
+  main .projects-section .project .project-content .project-description {
+    font-size: 1.4em;
+  }
+  main .projects-section .project .btn-container {
+    margin-top: 1 em;
+    width: 100%;
+    display: inline-flex;
+    bottom: 0;
+  }
+  main .projects-section .project .btn-container :nth-child(1) {
+    border-left: none;
+  }
+  main .projects-section .project .btn-container :nth-child(2) {
+    border-right: none;
+  }
+  main .projects-section .project .btn-container .blue-btn:hover {
+    background-color: #1878FB;
+  }
+  main .projects-section .project .btn-container .green-btn:hover {
+    background-color: #27BB21;
+  }
+  main .projects-section .project .btn-container .orange-btn:hover {
+    background-color: #FF7700;
+  }
+  main .projects-section .project .btn-container button {
+    width: 50%;
+    background-color: gray;
+    background-color: #f4f4f4;
+    height: 3em;
+    border-top: none;
+    border-bottom: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  main .projects-section .project .btn-container button:hover {
+    color: white;
+  }
+  main .projects-section .project .btn-container button:hoveri {
+    color: white;
+  }
+  main .projects-section .section-title {
     font-size: 2.4em;
   }
+  main .projects-section .section-slogan {
+    font-size: 1em;
+    margin-bottom: 4em;
+  }
+  main .projects-section h1 {
+    margin: 0px 0px 15px 0px;
+    font-size: 34px;
+  }
+  main .projects-section .project-container.slide-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  main .projects-section .project-container.slide-left {
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+  }
+  main .projects-section .project-container {
+    padding: 1em 4em 8em 4em;
+    display: flex;
+  }
+  main .projects-section .project-container .project-about:nth-child(even) {
+    margin-left: 7em;
+  }
+  main .projects-section .project-container .project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  main .projects-section .project-container .project-about h1 {
+    margin-bottom: 1.8em;
+    font-size: 2.8em;
+    align-self: center;
+  }
+  main .projects-section .project-container .project-about .title_center {
+    text-align: center;
+  }
+  main .projects-section .project-container .project-about .title_left {
+    text-align: left;
+  }
+  main .projects-section .project-container .project-about .title_right {
+    text-align: right;
+  }
+  main .projects-section .project-container .project-about .project-bio_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-bio_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-tech_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-tech_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-bio_left, main .projects-section .project-container .project-about .project-bio_right {
+    font-size: 1.6em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-tech_left, main .projects-section .project-container .project-about .project-tech_right {
+    font-size: 1.1em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-btn {
+    background-color: #ffffff;
+    border: 2px solid #EBEFF3;
+    color: #4A4A4A;
+    font-style: italic;
+    padding: 0.6em 3em;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  main .projects-section .project-container .project-about .project-btn:hover {
+    background-color: #4A4A4A;
+    color: #ffffff;
+  }
+  main .projects-section .project-container .project-demo {
+    margin-top: 3.8em;
+  }
+  main .projects-section .project-container .project-demo .project-asset {
+    max-height: 50em;
+    max-width: 54em;
+  }
+}
+@media (min-width: 768px) and (max-width: 999px) {
   main .landing .main-content {
     font-size: 1em;
     margin: 0em 4em;
   }
-  main .landing .main-content .project-container {
-    margin: 0em 8em;
-  }
-  main .resume-section .resume-pdf {
-    min-height: 700px;
-    min-width: 600px;
-  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   main {
     padding: 20px 0px;
+    /* Firefox < 16 */
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Internet Explorer */
   }
   main .landing {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
     margin-bottom: 3.4em;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
   }
   main .landing .main-content {
-    padding: 0px 70px 0px 100px;
-    text-align: left;
-    font-family: "Montserrat", serif;
+    font-family: "AvenirNext-Regular", serif;
+  }
+  main .landing .main-content .top-down-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .landing .main-content .asim-avatar {
+    width: 250px;
+    margin: 0 auto;
+  }
+  main .landing .main-content .h1_primary {
+    margin-top: 0.4em;
+    color: #CA1C1C;
+  }
+  main .landing .main-content .h1_secondary {
+    margin-top: -0.2em;
+    color: #4E00FF;
   }
   main .landing .main-content h1 {
-    display: unset;
     font-size: 3em;
+    margin: 0.2em 0em;
   }
   main .landing .main-content .brief-bio {
     line-height: 2em;
     font-size: 1.6em;
+    padding-left: 10em;
   }
-  main .landing .main-content .project-container {
-    margin: 0;
-    flex-direction: column;
-    letter-spacing: 0.1em;
-    width: 25em;
-    font-size: 1.3em;
-  }
-  main .landing .main-content .project-container .title {
-    font-family: "Montserrat", serif;
-    font-weight: 900;
-    line-height: 3.5em;
-    border-bottom: none;
-  }
-  main .landing .main-content .project-container .title:hover {
-    background-color: transparent;
-  }
-  main .landing .main-content .project-container li {
-    font-family: sans-serif;
-    line-height: 1.5em;
-    border-bottom: 0.1em solid;
-  }
-  main .landing .side-content {
-    text-align: center;
-    margin-right: 140px;
-    min-width: 395px;
-  }
-  main .landing .side-content img {
-    width: 350px;
-    border-radius: 50%;
-  }
-  main .landing .side-content h1 {
-    font-family: PokemonGB;
-  }
-  main .landing .side-content ul {
-    padding: 5px;
-    justify-content: space-evenly;
-  }
-  main .landing .side-content ul li {
-    font-size: 3em;
-  }
-  main .landing .side-content .resume {
-    background-color: transparent;
-    color: #fff;
-    padding: 0.5em 2em;
-    font-size: 1.3em;
-    border: 0.1em solid;
-    border-radius: 4px;
-  }
-  main .fa-chevron-circle-down {
+  main .landing .main-content .fa-chevron-circle-down {
     display: block;
     margin: 0 auto;
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
   }
-  main .resume-section {
-    padding: 130px 0px 130px 0px;
-    background-color: #15141f;
+  main .landing .main-content .fa-chevron-circle-down:hover {
+    color: #ffc740;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  main .projects-section {
+    padding: 130px 100px 130px 100px;
+    background-color: #ffffff;
     margin-top: 100px;
+    font-family: "AvenirNext-Regular", serif;
+    color: #4A4A4A;
+    text-align: center;
+  }
+  main .projects-section .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 6em;
+    justify-items: center;
+  }
+  main .projects-section .project {
+    width: 28vw;
+    padding-top: 1.8em;
+    overflow: hidden;
+    border: 1px solid #d5d5d581;
+    box-shadow: #d5d5d581;
+    border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 5px -5px #EBEFF3;
+    -moz-box-shadow: 10px 10px 5px -5px #EBEFF3;
+    box-shadow: 10px 10px 5px -5px #EBEFF3;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: "Montserrat", serif;
+    justify-content: space-between;
   }
-  main .resume-section h1 {
+  main .projects-section .project .asset-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    padding-top: 1.6em;
+  }
+  main .projects-section .project .asset-container .project-asset {
+    width: 90%;
+    height: 90%;
+  }
+  main .projects-section .project .project-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: left;
+    margin: 0 auto;
+  }
+  main .projects-section .project .project-content .project-title {
+    font-size: 2em;
+  }
+  main .projects-section .project .project-content .project-description {
+    font-size: 1.4em;
+  }
+  main .projects-section .project .btn-container {
+    margin-top: 1 em;
+    width: 100%;
+    display: inline-flex;
+    bottom: 0;
+  }
+  main .projects-section .project .btn-container :nth-child(1) {
+    border-left: none;
+  }
+  main .projects-section .project .btn-container :nth-child(2) {
+    border-right: none;
+  }
+  main .projects-section .project .btn-container .blue-btn:hover {
+    background-color: #1878FB;
+  }
+  main .projects-section .project .btn-container .green-btn:hover {
+    background-color: #27BB21;
+  }
+  main .projects-section .project .btn-container .orange-btn:hover {
+    background-color: #FF7700;
+  }
+  main .projects-section .project .btn-container button {
+    width: 50%;
+    background-color: gray;
+    background-color: #f4f4f4;
+    height: 3em;
+    border-top: none;
+    border-bottom: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  main .projects-section .project .btn-container button:hover {
+    color: white;
+  }
+  main .projects-section .project .btn-container button:hoveri {
+    color: white;
+  }
+  main .projects-section .section-title {
+    font-size: 3.4em;
+  }
+  main .projects-section .section-slogan {
+    font-size: 1.8em;
+    margin-bottom: 4em;
+  }
+  main .projects-section h1 {
     margin: 0px 0px 15px 0px;
     font-size: 34px;
   }
-  main .resume-section .resume-pdf {
-    min-height: 690px;
-    min-width: 600px;
+  main .projects-section .project-container.slide-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  main .projects-section .project-container.slide-left {
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+  }
+  main .projects-section .project-container {
+    padding: 1em 4em 8em 4em;
+    display: flex;
+  }
+  main .projects-section .project-container .project-about:nth-child(even) {
+    margin-left: 7em;
+  }
+  main .projects-section .project-container .project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  main .projects-section .project-container .project-about h1 {
+    margin-bottom: 1.8em;
+    font-size: 2.8em;
+    align-self: center;
+  }
+  main .projects-section .project-container .project-about .title_center {
+    text-align: center;
+  }
+  main .projects-section .project-container .project-about .title_left {
+    text-align: left;
+  }
+  main .projects-section .project-container .project-about .title_right {
+    text-align: right;
+  }
+  main .projects-section .project-container .project-about .project-bio_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-bio_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-tech_left {
+    max-width: 82%;
+  }
+  main .projects-section .project-container .project-about .project-tech_right {
+    max-width: 90%;
+  }
+  main .projects-section .project-container .project-about .project-bio_left, main .projects-section .project-container .project-about .project-bio_right {
+    font-size: 1.6em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-tech_left, main .projects-section .project-container .project-about .project-tech_right {
+    font-size: 1.1em;
+    margin: 0.5em 0em;
+  }
+  main .projects-section .project-container .project-about .project-btn {
+    background-color: #ffffff;
+    border: 2px solid #EBEFF3;
+    color: #4A4A4A;
+    font-style: italic;
+    padding: 0.6em 3em;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  main .projects-section .project-container .project-about .project-btn:hover {
+    background-color: #4A4A4A;
+    color: #ffffff;
+  }
+  main .projects-section .project-container .project-demo {
+    margin-top: 3.8em;
+  }
+  main .projects-section .project-container .project-demo .project-asset {
+    max-height: 50em;
+    max-width: 54em;
   }
 }
 

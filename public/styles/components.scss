@@ -1,35 +1,88 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 14px;
     padding: 0 auto;
     margin: 0 auto;
-    background-color: $bg;
-    
+    background-color: $bg;   
 }
 
-header {
+i:hover, a:hover {
+    cursor: pointer;
+}
+
+
+// COMPONENT LAYOUTS
+.top-down-center {
     display: flex;
-    justify-content: flex-end;
-    background-color: $bg;
-    p {
-        font-family: Helvetica;
-        background-color: transparent;
-        color: #fff;
-        padding: 10px 10px;
-        margin-right: 25px;
-        font-size: 1em;
-        font-family: $textfont;
-        letter-spacing: .1em;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+// ONE OFF THINGS
+.github-graph {
+    margin: 1em auto 3em auto; 
+    max-width: 80vw;
+}
+
+.icon {
+    font-size: 2em;
+    margin: 0 .6em;
+}
+
+.icon:hover {
+    color: $yellow;
+}
+
+.center_text {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0.5em 0em;
+    padding: 0em 2em;
+}
+
+footer {
+    font-family: $textfont;
+    ul {
+        text-decoration-style: none;
     }
 }
 
 @include phone {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0em 5em;
+        p {
+            font-family: Helvetica;
+            background-color: transparent;
+            color: $text;
+            padding: 10px 10px;
+            margin-right: 25px;
+            font-size: 1.4em;
+            font-family: $textfont;
+            letter-spacing: .1em;
+        }
+        p:hover {
+            color: $yellow;
+        }
+        .right, .left {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     footer {
         display: flex;
         flex-direction: column;
         margin: 5em 1.2em;        
         letter-spacing: 1px;
         line-height: 1.5em;
-        color: $light;
+        color: $text;
         font-family: $textfont;
         .credits {
             text-align: center;
@@ -47,6 +100,10 @@ header {
             text-align: center;
         }
     }
+    .waka-graph {
+        // margin: 1em auto 2em auto; 
+        max-width: 92vw;
+    }
 }
 
 @include tablet {
@@ -59,23 +116,82 @@ header {
         }
     }
 }
+
 @include desktop {
-    footer {
+    header {
+        display: flex;
         flex-direction: row;
-        margin: 5em 6em;
+        justify-content: space-between;
+        padding: 0em 5em;
+        p {
+            font-family: Helvetica;
+            background-color: transparent;
+            color: $text;
+            padding: 10px 10px;
+            margin-right: 25px;
+            font-size: 1.4em;
+            font-family: $textfont;
+            letter-spacing: .1em;
+        }
+        p:hover {
+            color: $yellow;
+        }
+        .right, .left {
+            display: flex;
+            align-items: center;
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        margin: 5em 6em;        
+        letter-spacing: 1px;
+        line-height: 1.5em;
+        color: $text;
+        font-family: $textfont;
+        .credits {
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+        ul {
+            display: flex;
+            margin: 0em 3em;
+            align-items: center;
+            justify-content: space-between;
+            color: $text;
+            font-size: 1.5em;
+            list-style: none;
+            text-align: center;
+        }
+        ul > * {
+            margin: auto .2em;
+        }
+    }
+    // footer {
+    //     flex-direction: row;
+    //     margin: 5em 6em;
         .qoute-text {
+            font-size: 1.2em;
             margin-right: 7em;
         }
         .credits {
+            font-size: 1.2em;
             text-align: left;
             margin: auto;
         }
-        ul {
-            font-size: 2em;
-            margin: 1em 0;
-            justify-content: space-around;  
+    //     ul {
+    //         font-size: 2em;
+    //         margin: 1em 0;
+    //         justify-content: space-around;  
 
-        }
+    //     }
+    // }
+    .waka-graph {
+        // margin: 1em auto 2em auto; 
+        max-width: 80vw;
+        max-width: 42em;
+        margin: 0 auto 5em auto;
     }
 }
 // Class Styles
@@ -92,8 +208,37 @@ header {
     opacity: 0.3;
 }
 
-a  {
+a {
     text-decoration: none;
-    color: white;
-    // font-family: Helvetica;
+}
+
+.blue {
+    color: #1878FB;
+}
+
+.bluebg {
+    background-color: #1878FB;
+}
+
+.green {
+    color: #27BB21;
+}
+
+.greenbg {
+    background-color: #27BB21;
+}
+
+
+.orange {
+    color: #FF7700;
+}
+
+.orangebg {
+    background-color: #FF7700;
+}
+
+
+.tech-text {
+    font-size: 1.2em;
+    font-style: italic;
 }
