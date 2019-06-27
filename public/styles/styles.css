@@ -602,7 +602,7 @@ a {
   main .projects-section .project .btn-container .orange-btn:hover {
     background-color: #FF7700;
   }
-  main .projects-section .project .btn-container button {
+  main .projects-section .project .btn-container a {
     width: 50%;
     background-color: gray;
     background-color: #f4f4f4;
@@ -613,10 +613,10 @@ a {
     cursor: pointer;
     transition: 0.3s;
   }
-  main .projects-section .project .btn-container button:hover {
+  main .projects-section .project .btn-container a:hover {
     color: white;
   }
-  main .projects-section .project .btn-container button:hoveri {
+  main .projects-section .project .btn-container a:hoveri {
     color: white;
   }
   main .projects-section .section-title {
