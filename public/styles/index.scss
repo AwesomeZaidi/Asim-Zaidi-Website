@@ -77,8 +77,8 @@ main {
         }
 
         .projects-section {
-            padding: 76px 10px 76px 10px;
-            background-color: #ffffff;
+            padding: 0px 10px 76px 10px;
+            // background-color: #ffffff;
             margin-top: 100px;
             font-family: $textfont;
             color: $text;
@@ -298,8 +298,8 @@ main {
             }
         }
         .projects-section {
-            padding: 130px 100px 130px 100px;
-            background-color: #ffffff;
+            padding: 0px 100px 130px 100px;
+            // background-color: #ffffff;
             margin-top: 100px;
             font-family: $textfont;
             color: $text;
@@ -522,7 +522,7 @@ main {
             flex-direction: column;
             text-align: left;
             align-items: center;
-            // margin: 0em 1em;
+            margin-top: 8em;
             margin-bottom: 3.4em;
             -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
             -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -591,10 +591,10 @@ main {
             from { opacity: 0; }
             to   { opacity: 1; }
         }
-        
+
         .projects-section {
-            padding: 130px 100px 130px 100px;
-            background-color: #ffffff;
+            padding: 0px 100px 130px 100px;
+            // background-color: #ffffff;
             margin-top: 100px;
             font-family: $textfont;
             color: $text;

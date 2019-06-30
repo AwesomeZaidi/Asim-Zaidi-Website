@@ -9,6 +9,10 @@ body {
     background-color: $bg;   
 }
 
+h1 {
+    color: #282828;
+}
+
 i:hover, a:hover {
     cursor: pointer;
 }
@@ -46,43 +50,22 @@ i:hover, a:hover {
 
 footer {
     font-family: $textfont;
-    ul {
+    background-color: #1a1a1a;
+    color: #fff;
+    ul a {
+        color: #fff !important;
         text-decoration-style: none;
     }
 }
 
-@include phone {
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0em 5em;
-        p {
-            font-family: Helvetica;
-            background-color: transparent;
-            color: $text;
-            padding: 10px 10px;
-            margin-right: 25px;
-            font-size: 1.4em;
-            font-family: $textfont;
-            letter-spacing: .1em;
-        }
-        p:hover {
-            color: $yellow;
-        }
-        .right, .left {
-            display: flex;
-            align-items: center;
-        }
-    }
 
+@include phone {
     footer {
         display: flex;
         flex-direction: column;
-        margin: 5em 1.2em;        
+        padding: 5em 1.2em;        
         letter-spacing: 1px;
         line-height: 1.5em;
-        color: $text;
         font-family: $textfont;
         .credits {
             text-align: center;
@@ -108,46 +91,12 @@ footer {
 
 @include tablet {
     footer {
-        margin: 5em 6em;
-        ul {
-            justify-content: space-evenly;
-            font-size: 2em;
-            margin: 0 auto;  
-        }
-    }
-}
-
-@include desktop {
-    header {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        padding: 0em 5em;
-        p {
-            font-family: Helvetica;
-            background-color: transparent;
-            color: $text;
-            padding: 10px 10px;
-            margin-right: 25px;
-            font-size: 1.4em;
-            font-family: $textfont;
-            letter-spacing: .1em;
-        }
-        p:hover {
-            color: $yellow;
-        }
-        .right, .left {
-            display: flex;
-            align-items: center;
-        }
-    }
-    footer {
-        display: flex;
-        flex-direction: row;
-        margin: 5em 6em;        
+        padding: 5em 6em;        
         letter-spacing: 1px;
         line-height: 1.5em;
-        color: $text;
+        // color: $text;
         font-family: $textfont;
         .credits {
             text-align: center;
@@ -168,9 +117,70 @@ footer {
             margin: auto .2em;
         }
     }
-    // footer {
-    //     flex-direction: row;
-    //     margin: 5em 6em;
+        .qoute-text {
+            font-size: 1.2em;
+            margin-right: 7em;
+        }
+        .credits {
+            font-size: 1.2em;
+            text-align: left;
+            margin: auto;
+        }
+    //     ul {
+    //         font-size: 2em;
+    //         margin: 1em 0;
+    //         justify-content: space-around;  
+
+    //     }
+    // }
+    ul {
+        justify-content: space-evenly;
+        font-size: 2em;
+        margin: 0 auto;  
+    }
+}
+
+@include desktop {
+    .navbar {
+        background-color: #1a1a1a;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        z-index: 10;
+        a {
+            color: #fff;
+        }
+    }
+    nav ul {
+        margin: 0em;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        padding: 5em 6em;        
+        letter-spacing: 1px;
+        line-height: 1.5em;
+        // color: $text;
+        font-family: $textfont;
+        .credits {
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+        ul {
+            display: flex;
+            margin: 0em 3em;
+            align-items: center;
+            justify-content: space-between;
+            color: $text;
+            font-size: 1.5em;
+            list-style: none;
+            text-align: center;
+        }
+        ul > * {
+            margin: auto .2em;
+        }
+    }
         .qoute-text {
             font-size: 1.2em;
             margin-right: 7em;
