@@ -12,13 +12,6 @@ $yellow: #ffc740;
 $light: green;
 $lightgray: green;
 
-// @font-face {
-//   font-family: 'PokemonGB';
-//   src: url('/assets/fonts/pokemon-font/PokemonGB.ttf');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 @font-face {
   font-family: 'AvenirNext-Bold';
   src: url('/assets/fonts/AvenirNext/AvenirNextLTPro-Bold.ttf');
@@ -32,9 +25,6 @@ $lightgray: green;
 
 $textfont: 'AvenirNext-Regular', serif;
 $titlefont: 'AvenirNext-Bold', serif;
-
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
 // scss variables required to be compiled before, css variables are made at root and can be used in
